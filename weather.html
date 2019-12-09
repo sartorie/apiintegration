@@ -69,7 +69,7 @@
 			console.log(units);
 		}
 
-		let query = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=" + units +"&APPID=" + YourWeatherAppID;
+		let query = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=" + units +"&APPID=" + YourWeatherAppID;
   	console.log("Query is :" + query)
 
   	$.getJSON(query,function(json){
@@ -80,7 +80,7 @@
 			$("#high").html(json.main.temp_max)
 			$("#low").html(json.main.temp_min)
 
-			var icon = "http://openweathermap.org/img/w/" + json.weather[0].icon + ".png";
+			var icon = "https://openweathermap.org/img/w/" + json.weather[0].icon + ".png";
 			$('#tempImg').prop('src', icon);
     })
   }
